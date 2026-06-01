@@ -1,10 +1,6 @@
 # CLAUDE.md
 
-This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
-
----
-
-# This doucment is writing for the describtion of instruction for vibe coding AI, including both general purpose instructions and project-specifc instructions. The purpose of this document is to allow AI quickly understand the specific details of my project, as well as the editing my code correctly, and following my requirements.
+This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.This doucment is writing for the describtion of instruction for vibe coding AI, including both general purpose instructions and project-specifc instructions. The purpose of this document is to allow AI quickly understand the specific details of my project, as well as the editing my code correctly, and following my requirements.
 
 ---
 
@@ -33,8 +29,8 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 * **环境**：在这个project里面，总是用conda "MedicalVideoNew"这个环境来执行terminal和跑python文件，里面有正确的Python版本和安装包/在这里安装环境
 * **可用显卡**：在这个project里面，你可以支配[0,1,2,3,4,5,6,7]这8块GPU来执行terminal和跑python文件
 * **新项目的可维持性**：当创建新feature和新代码的时候，要确保新代码的可维护性强，重复利用性强，有design pattern。
-* **文件结构**：我目前project directory的最高层结构如下：1. checkpoint folder, 2.configs folder, 3.data folder, 4.Deleted_files folder, 5.exp_results folder, 6.final_deliverable folder, 7.logs folder, 8.model folder, 9. reports folder, 10. scripts folder, 11. src folder, 12. tests folder, 还有一些其他的最高层文件夹例如一下克隆下来的github repo的文件夹，整个项目的readme.md, requirements.txt，claude.md(此文件) 等等。每个folder下面又有自己专属的子文件夹。你应该在每次对话都清楚了解整个project的高层文件结构。在每次编写代码或者修改代码的时候，又或者是output results的时候，都要根据每个folder的角色，把存储的东西或者把写的代码或者输出结果，放到对应的文件夹里面去，确保整个项目的结构清晰，代码易于管理和维护，而不是随便乱放。
-* **文件结构细节**：1.checkpoints 是存储我的！模型训练结果权重的文件夹，每个checkpoints都有一个对应的version，例如version_1, version2....。2.configs 是存储我的配置文件的文件夹。3.data 是存储我的数据集的文件夹，所有的数据集包括没处理的，还是正在处理的还是处理完的都放在这个文件夹里。4.Deleted_files 是存储我删除的文件的文件夹。每次我叫你删除或清理文件的时候你都应该把要删除的文件转移到Delted_files这里来，而不是直接删除它，以防误删。5.exp_results 是存储我的实验only结果的文件夹。6.final_deliverable 是存储我的最终交付物的文件夹。比如说当我的project所有东西都fianlzie了，我会把所有东西到统一储存到这里来。但是这个文件夹一般不用管他，因为这个是项目大后期才要处理的事情了。7.logs 是存储我的日志文件的文件夹，例如训练日志，或者是其他的日志。8.model 是存储一些下载的模型的文件夹。9. reports 是存储我的报告文件的文件夹。里面还有sub 文件夹visualizations 和documentations。visualization子文件夹是专门用来储存图片类型的结果的地方。documentations子文件夹是专门用来储存关于project 的components的文字介绍的地方。10. scripts 是存储我的脚本文件的文件夹。11. src 是存储我的源代码的文件夹。12. tests 是存储我的测试代码的文件夹，所有和测试相关非核心脚本的代码都储存在这里，测试的结果输出应该是大概写在reports文件夹或者exp_results或者其他相应的文件夹里面。
+* **文件结构**：我目前project directory的最高层结构如下：1. checkpoint folder, 2.configs folder, 3.data folder, 4.Deleted_files folder, 5.exp_results folder, 6.logs folder, 7.model folder, 8. reports folder, 9. scripts folder, 10. src folder, 11. tests folder, 还有一些其他的最高层文件夹例如一下克隆下来的github repo的文件夹，整个项目的readme.md, requirements.txt，claude.md(此文件) 等等等等。每个folder下面又有自己专属的子文件夹。你应该在每次对话都清楚了解整个project的高层文件结构。在每次编写代码或者修改代码的时候，又或者是output results的时候，都要根据每个folder的角色，把存储的东西或者把写的代码或者输出结果，放到对应的文件夹里面去，确保整个项目的结构清晰，代码易于管理和维护，而不是随便乱放。
+* **文件结构细节**：1.checkpoints 是存储我自己的！！模型训练结果权重的文件夹，每个checkpoints都要有一个对应的version，例如version_1, version2....。2.configs 是存储我的配置文件的文件夹。3.data 是存储我的数据集的文件夹，所有的数据集包括没处理的，还是正在处理的还是处理完的都放在这个文件夹里。另外值得一提的是/data 下面还有一个专门的子文件夹叫做preliminaries，这个文件夹主要是方便我储存一些前置知识，例如我进行科研项目的时候会把一些前置论文存到这里，vibecoding模型可以随时去这里读取相关论文的知识（如果有的话）而不是全都论文都通过websearch获得。4.Deleted_files 是存储我删除的文件的文件夹。每次我叫你删除或清理文件的时候你都应该把要删除的文件转移到Delted_files这里来，而不是直接删除它，以防误删。5.exp_results 是存储我的实验only结果的文件夹。6.logs 是存储我的日志文件的文件夹，例如训练日志，或者是其他的日志。7.model 是存储一些下载的模型的文件夹。8. reports 是存储我的报告文件的文件夹。里面还有sub 文件夹visualizations 和documentations。visualization子文件夹是专门用来储存图片类型的结果的地方。documentations子文件夹是专门用来储存关于project 的components的文字介绍的地方。final_deliverable 是存储我的最终交付物的文件夹。比如说当我的project所有东西都fianlzie了，我会把所有东西到统一储存到这里来。但是这个文件夹一般不用管他，因为这个是项目大后期才要处理的事情了。9. scripts 是存储我的脚本文件的文件夹。10. src 是存储我的源代码的文件夹。11. tests 是存储我的测试代码的文件夹，所有和测试相关非核心脚本的代码都储存在这里，测试的结果输出应该是大概写在reports文件夹或者exp_results或者其他相应的文件夹里面。
 *  **文件结构细节2**: 我的claude.md文件总是会担任两个角色：1. 作为项目的overview文件，记录项目的整体进度和状态。2. 作为整个项目vibe coding的引导。
 * **有问题随时问**：当你不确定某个细节的时候，随时问我，不要假设
 
@@ -46,6 +42,8 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ### 5. 核心文件持续维护
 每次有项目有新的结果或者新的进展的时候，总是把整个project overview的整体进度在claude.md更新，帮助下一轮vibecoding对话完美知道我的project目前最新进度在哪里，也方便我自己跟踪现在project的最新进度。claude.md里面的进度更新是粗略的就可以了(overview)。详细的整体进度更新应该更新在reports/documentations 里面去。
+
+---
 
 
 ALSO, please follow Karpathy-Inspired Claude Code Guidelines:
@@ -114,7 +112,7 @@ Strong success criteria let you loop independently. Weak criteria ("make it work
 
 **These guidelines are working if:** fewer unnecessary changes in diffs, fewer rewrites due to overcomplication, and clarifying questions come before implementation rather than after mistakes.
 
-(以上部分的内容在更新claude.md文件的时候不要修改)
+(以上所有部分的内容在更新claude.md文件的时候不要修改)
 
 -----------------------------------------------------------------------------
 
