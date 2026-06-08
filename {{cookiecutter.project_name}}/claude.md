@@ -41,7 +41,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 * **可视性**：AI在跑任务的时候，尽量不要在后台terminal跑任务，因为这样我看不到你在跑什么，总是把命令丢到我当前打开的终端里执行
 
 ### 5. 核心文件持续维护
-每次有项目有新的结果或者新的进展的时候，总是把整个project overview的整体进度在claude.md更新，帮助下一轮vibecoding对话完美知道我的project目前最新进度在哪里，也方便我自己跟踪现在project的最新进度。claude.md里面的进度更新是粗略的就可以了(overview)。详细的整体进度更新应该更新在reports/documentations 里面去。
+每次有项目有新的结果或者新的进展的时候，总是把整个project overview的整体进度在claude.md更新，帮助下一轮vibecoding对话完美知道我的project目前最新进度在哪里，也方便我自己跟踪现在project的最新进度。claude.md里面的进度更新必须是精简的(overview)。详细的整体进度更新应该更新在reports/documentations 里面去。
 
 ---
 
@@ -118,4 +118,4 @@ Strong success criteria let you loop independently. Weak criteria ("make it work
 
 ## Project Overview 
 
-(这里开始是对我的project的整体概述和状态的更新。你要时常更新这个部分，帮助下一轮vibecoding对话知道我的project目前最新进度在哪里，也方便我自己跟踪现在project的最新进度。如果这个部分下面还没有内容，你可以直接写在下面，开始project的overview)
+(这里开始是对我的project的整体概述和状态的更新。你要时常 精简的 更新这个部分，帮助下一轮vibecoding对话知道我的project目前最新进度在哪里，也方便我自己跟踪现在project的最新进度。如果这个部分下面还没有内容，你可以直接写在下面，开始project的overview)
